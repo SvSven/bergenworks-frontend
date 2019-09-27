@@ -6,7 +6,7 @@ const MainMenu = props => {
       {props.items ? (
         <ul>
           {props.items.map(item => {
-            return <MainMenuItem key={item.id} title={item.title} />;
+            return <MainMenuItem key={item.id} {...item} />;
           })}
         </ul>
       ) : null}

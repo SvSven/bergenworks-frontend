@@ -1,7 +1,6 @@
 import React from "react";
 import { initializeStore } from "./redux-store";
-import Axios from "axios";
-import Api from "./api";
+import API from "./api";
 import { storeActions } from "./redux-store";
 
 const isServer = typeof window === "undefined";
@@ -31,8 +30,8 @@ export default App => {
       ctx.reduxStore = reduxStore;
 
       if (ctx.req) {
-        const response = await Axios.get(Api.menus);
-        ctx.reduxStore.dispatch(storeActions.setMenus(response.data));
+        const menus = await API.getMenus();
+        ctx.reduxStore.dispatch(storeActions.setMenus(menus));
       }
 
       const pageProps = Component.getInitialProps

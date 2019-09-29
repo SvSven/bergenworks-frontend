@@ -1,5 +1,4 @@
-import Axios from "axios";
-import Api from "../utils/api";
+import API from "../utils/api";
 
 const Page = props => {
   return (
@@ -12,15 +11,9 @@ const Page = props => {
 
 Page.getInitialProps = async function(context) {
   const { page } = context.query;
+  const content = await API.getPage(page);
 
-  const response = await Axios.get(`${Api.pages}?slug=${page}`, {
-    proxy: {
-      host: "localhost",
-      port: 80
-    }
-  });
-
-  return response.data[0];
+  return content[0];
 };
 
 export default Page;

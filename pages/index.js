@@ -1,6 +1,5 @@
 import React from "react";
-import Axios from "axios";
-import Api from "../utils/api";
+import API from "../utils/api";
 
 const Home = props => {
   return (
@@ -12,14 +11,7 @@ const Home = props => {
 };
 
 Home.getInitialProps = async function() {
-  const response = await Axios.get(Api.frontpage, {
-    proxy: {
-      host: "localhost",
-      port: 80
-    }
-  });
-
-  return response.data;
+  return await API.getFrontpage();
 };
 
 export default Home;

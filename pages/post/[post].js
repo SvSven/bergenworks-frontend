@@ -1,5 +1,4 @@
-import Axios from "axios";
-import Api from "../../utils/api";
+import API from "../../utils/api";
 
 const Post = props => {
   return (
@@ -12,15 +11,9 @@ const Post = props => {
 
 Post.getInitialProps = async function(context) {
   const { post } = context.query;
+  const content = await API.getPost(post);
 
-  const response = await Axios.get(`${Api.posts}?slug=${post}`, {
-    proxy: {
-      host: "localhost",
-      port: 80
-    }
-  });
-
-  return response.data[0];
+  return content[0];
 };
 
 export default Post;

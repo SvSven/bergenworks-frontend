@@ -1,4 +1,5 @@
 import Head from "next/head";
+import "../../assets/style/global.scss";
 
 const Meta = props => {
   return (

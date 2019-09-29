@@ -1,5 +1,5 @@
 import Head from "next/head";
-import "../../assets/style/global.scss";
+import "../../assets/style/main.scss";
 
 const Meta = props => {
   return (

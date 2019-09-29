@@ -1,0 +1,21 @@
+html {
+    box-sizing: border-box;
+    font-family: $font-family-main;
+    font-weight: $font-weight-regular;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3 {
+    font-family: $font-family-heading;
+}
+
+h1, h2 {
+    font-weight: $font-weight-extrabold;
+}
+
+h3, h4, h5, h6 {
+    font-weight: $font-weight-bold;
+}

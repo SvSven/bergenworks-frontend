@@ -11,21 +11,21 @@ const ENDPOINTS = {
 };
 
 const API = {
-  getMenus: async () => {
-    const response = await Axios.get(ENDPOINTS.menus);
+  get: async endpoint => {
+    const response = await Axios.get(endpoint);
     return response.data;
+  },
+  getMenus: async () => {
+    return await API.get(ENDPOINTS.menus);
   },
   getFrontpage: async () => {
-    const response = await Axios.get(ENDPOINTS.frontpage);
-    return response.data;
+    return await API.get(ENDPOINTS.frontpage);
   },
   getPage: async page => {
-    const response = await Axios.get(`${ENDPOINTS.pages}?slug=${page}`);
-    return response.data;
+    return await API.get(`${ENDPOINTS.pages}?slug=${page}`);
   },
   getPost: async post => {
-    const response = await Axios.get(`${ENDPOINTS.posts}?slug=${post}`);
-    return response.data;
+    return await API.get(`${ENDPOINTS.posts}?slug=${post}`);
   }
 };
 

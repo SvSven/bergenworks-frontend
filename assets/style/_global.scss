@@ -2,14 +2,16 @@ html {
     box-sizing: border-box;
     font-family: $font-family-main;
     font-weight: $font-weight-regular;
+    color: $color-black-text;
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-heading;
+    color: $color-black;
 }
 
 h1, h2 {

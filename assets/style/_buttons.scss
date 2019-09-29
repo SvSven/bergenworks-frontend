@@ -1,0 +1,53 @@
+.button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: $color-grey-darker;
+    padding: 1em 3em;
+    font-weight: $font-weight-bold;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover, &:focus {
+        background: scale-color($color-grey-darker, $lightness: -20%);
+    }
+
+    &.is-red {
+        background: $color-red;
+        color: $color-white;
+
+        &:hover, &:focus {
+            background: scale-color($color-red, $lightness: -20%);
+        }
+    }
+
+    &.is-cyan {
+        background: $color-cyan;
+        color: $color-white;
+
+        &:hover, &:focus {
+            background: scale-color($color-cyan, $lightness: -20%);
+        }
+    }
+
+    &.is-amber {
+        background: $color-amber;
+        color: $color-white;
+
+        &:hover, &:focus {
+            background: scale-color($color-amber, $lightness: -20%);
+        }
+    }
+
+    &-outlined {
+        @extend .button;
+        background: transparent;
+        border: solid 2px $color-cyan;
+        color: $color-cyan;
+
+        &:hover, &:focus {
+            background: $color-cyan;
+            color: $color-white;
+        }
+    }
+}

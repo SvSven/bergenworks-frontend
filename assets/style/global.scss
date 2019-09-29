@@ -1,9 +1,11 @@
 @import "../../node_modules/normalize.css/normalize.css";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:700,800&display=swap);
+@import "variables";
 
 html {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-family-main;
+    font-weight: $font-weight-regular;
 }
 
 *, *:before, *:after {
@@ -11,5 +13,13 @@ html {
 }
 
 h1, h2, h3 {
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family-heading;
+}
+
+h1, h2 {
+    font-weight: $font-weight-extrabold;
+}
+
+h3, h4, h5, h6 {
+    font-weight: $font-weight-bold;
 }

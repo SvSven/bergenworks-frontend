@@ -1,28 +1,22 @@
 import React from "react";
 import App from "next/app";
 
-import Axios from "axios";
-import Api from "../utils/api";
+import withReduxStore from "../utils/with-redux-store";
+import { Provider } from "react-redux";
+
 import Layout from "../layouts/main";
 
 class MyApp extends App {
-  static async getInitialProps(appContext) {
-    const appProps = await App.getInitialProps(appContext);
-
-    const response = await Axios.get(Api.menus);
-    const menus = response.data;
-
-    return { ...appProps, menus };
-  }
-
   render() {
-    const { Component, pageProps, menus } = this.props;
+    const { Component, pageProps, reduxStore } = this.props;
     return (
-      <Layout menus={menus}>
-        <Component {...pageProps} />
-      </Layout>
+      <Provider store={reduxStore}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </Provider>
     );
   }
 }
 
-export default MyApp;
+export default withReduxStore(MyApp);

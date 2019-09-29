@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
 
-import Meta from "../components/html-head/meta";
-import MainMenu from "../components/navigation/MainMenu";
+import HeadMeta from "./HeadMeta";
+import MainMenu from "../navigation/MainMenu";
 
 const MainLayout = props => {
   const menus = useSelector(state => state.menus);
   return (
     <>
-      <Meta />
+      <HeadMeta />
       <MainMenu items={menus["main-menu"]} />
       <>{props.children}</>
     </>

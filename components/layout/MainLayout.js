@@ -9,7 +9,7 @@ const MainLayout = props => {
     <>
       <HeadMeta />
       <MainMenu items={menus["main-menu"]} />
-      <>{props.children}</>
+      <main className="main-content">{props.children}</main>
     </>
   );
 };

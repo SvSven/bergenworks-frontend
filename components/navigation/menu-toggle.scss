@@ -1,0 +1,63 @@
+.navbar-toggle {
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+
+    &-icon {
+        width: 30px;
+        height: 20px;
+        position: relative;
+        margin: 0;
+        transform: rotate(0deg);
+        transition: .3s ease-in-out;
+        cursor: pointer;
+    }
+
+     &-icon span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #fff;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .15s ease-in-out;
+    }
+
+    &-icon span:nth-child(1) {
+        top: 0px;
+    }
+
+    &-icon span:nth-child(2),
+    &-icon span:nth-child(3) {
+        top: 8px;
+    }
+
+    &-icon span:nth-child(4) {
+        top: 16px;
+    }
+
+    &-icon.toggled span:nth-child(1) {
+        top: 16px;
+        width: 0%;
+        left: 50%;
+    }
+
+    &-icon.toggled span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    &-icon.toggled span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    &-icon.toggled span:nth-child(4) {
+        top: 8px;
+        width: 0%;
+        left: 50%;
+    }
+}

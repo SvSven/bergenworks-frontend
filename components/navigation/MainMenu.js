@@ -1,11 +1,32 @@
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Router from "next/router";
+
+import MenuToggle from "./MenuToggle";
 import PageMenuItem from "./PageMenuItem";
 import PostMenuItem from "./PostMenuItem";
 import CustomMenuItem from "./CustomMenuItem";
-import Link from "next/link";
 
 import "./main-menu.scss";
 
 const MainMenu = props => {
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setMenuVisible(false);
+    };
+
+    Router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      Router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, []);
+
   return (
     <div className="navbar">
       <nav className="navbar-inner container">
@@ -13,10 +34,12 @@ const MainMenu = props => {
           <Link href="/">
             <a>BW</a>
           </Link>
+
+          <MenuToggle handleOnClick={toggleMenu} isToggled={menuVisible} />
         </div>
 
         {props.items ? (
-          <ul className="navbar-menu">
+          <ul className={`navbar-menu ${menuVisible ? "is-active" : null}`}>
             {props.items.map(item => {
               // TODO: check if this works with custom post_types...
               switch (item.type) {

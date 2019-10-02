@@ -32,6 +32,9 @@ export default App => {
       if (ctx.req) {
         const menus = await API.getMenus();
         ctx.reduxStore.dispatch(storeActions.setMenus(menus));
+
+        const global = await API.getGlobalInfo();
+        ctx.reduxStore.dispatch(storeActions.setGlobalInfo(global));
       }
 
       const pageProps = Component.getInitialProps

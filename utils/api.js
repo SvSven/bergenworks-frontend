@@ -15,6 +15,9 @@ const API = {
     const response = await Axios.get(endpoint);
     return response.data;
   },
+  getGlobalInfo: async () => {
+    return await API.get(ENDPOINTS.site_info);
+  },
   getMenus: async () => {
     return await API.get(ENDPOINTS.menus);
   },

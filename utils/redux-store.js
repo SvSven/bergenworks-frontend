@@ -5,7 +5,8 @@ const initialStoreState = {
 };
 
 const actionTypes = {
-  SET_MENUS: "SET_MENUS"
+  SET_MENUS: "SET_MENUS",
+  SET_GLOBAL_INFO: "SET_GLOBAL_INFO"
 };
 
 const reducer = (state = initialStoreState, action) => {
@@ -14,6 +15,8 @@ const reducer = (state = initialStoreState, action) => {
       return Object.assign({}, state, {
         menus: action.data
       });
+    case actionTypes.SET_GLOBAL_INFO:
+      return Object.assign({}, state, action.data);
     default:
       return state;
   }
@@ -22,6 +25,9 @@ const reducer = (state = initialStoreState, action) => {
 export const storeActions = {
   setMenus: data => {
     return { type: actionTypes.SET_MENUS, data: data };
+  },
+  setGlobalInfo: data => {
+    return { type: actionTypes.SET_GLOBAL_INFO, data: data };
   }
 };
 

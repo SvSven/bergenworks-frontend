@@ -6,7 +6,7 @@ import MenuToggle from "./MenuToggle";
 import PageMenuItem from "./PageMenuItem";
 import PostMenuItem from "./PostMenuItem";
 import CustomMenuItem from "./CustomMenuItem";
-import Logo from "../logo/Logo";
+import Logo from "../shared/Logo";
 
 import "./main-menu.scss";
 

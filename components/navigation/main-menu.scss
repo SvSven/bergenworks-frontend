@@ -26,6 +26,11 @@ $breakpoint: $mobile;
         display: flex;
         align-items: center;
 
+        img {
+            height: 2rem;
+            width: auto;
+        }
+
         @media screen and (min-width: $breakpoint) {
             width: auto;
         }

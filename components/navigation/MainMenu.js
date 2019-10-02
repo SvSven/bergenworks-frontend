@@ -32,7 +32,7 @@ const MainMenu = props => {
       <nav className="navbar-inner container">
         <div className="navbar-brand">
           <Link href="/">
-            <a>BW</a>
+            <a>{props.logo ? <img src={props.logo} /> : "Bergen.Works"}</a>
           </Link>
 
           <MenuToggle handleOnClick={toggleMenu} isToggled={menuVisible} />

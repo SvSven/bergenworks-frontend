@@ -11,7 +11,7 @@ const MainLayout = props => {
   return (
     <>
       <HeadMeta />
-      <MainMenu items={menus["main-menu"]} logo={navbarLogo} />
+      <MainMenu items={menus["main-menu"]["items"]} logo={navbarLogo} />
       <main className="main-content">{props.children}</main>
       <Footer />
     </>

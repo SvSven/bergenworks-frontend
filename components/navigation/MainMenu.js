@@ -6,6 +6,7 @@ import MenuToggle from "./MenuToggle";
 import PageMenuItem from "./PageMenuItem";
 import PostMenuItem from "./PostMenuItem";
 import CustomMenuItem from "./CustomMenuItem";
+import Logo from "../logo/Logo";
 
 import "./main-menu.scss";
 
@@ -32,7 +33,7 @@ const MainMenu = props => {
       <nav className="navbar-inner container">
         <div className="navbar-brand">
           <Link href="/">
-            <a>{props.logo ? <img src={props.logo} /> : "Bergen.Works"}</a>
+            <a>{props.logo ? <Logo src={props.logo} /> : "Bergen.Works"}</a>
           </Link>
 
           <MenuToggle handleOnClick={toggleMenu} isToggled={menuVisible} />

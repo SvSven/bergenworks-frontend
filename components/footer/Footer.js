@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import Logo from "../shared/Logo";
+import ContactList from "../shared/ContactList";
 
 import "./footer.scss";
 
@@ -11,6 +12,7 @@ const Footer = props => {
       <div className="footer-inner container">
         <div className="footer-contact">
           <Logo src={logo} className="footer-logo" />
+          <ContactList className="footer-contact-list" />
         </div>
         <div className="footer-nav">
           <h4>Footer navigation</h4>

@@ -1,17 +1,16 @@
+import { useSelector } from "react-redux";
+import Logo from "../shared/Logo";
+
 import "./footer.scss";
 
-/**
- * Data used here can be fetched upon first app load and stored in redux, since all of
- * it is shared between different pages
- */
-
 const Footer = props => {
+  const logo = useSelector(state => state.logo.footer);
+
   return (
     <footer className="footer">
       <div className="footer-inner container">
         <div className="footer-contact">
-          <h4>Footer contact</h4>
-          <p>Logo + contact information</p>
+          <Logo src={logo} className="footer-logo" />
         </div>
         <div className="footer-nav">
           <h4>Footer navigation</h4>

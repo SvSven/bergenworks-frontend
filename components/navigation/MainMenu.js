@@ -3,11 +3,10 @@ import Link from "next/link";
 import Router from "next/router";
 
 import MenuToggle from "./MenuToggle";
-import MenuLink from "./MenuLink";
+import MenuList from "./MenuList";
 import Logo from "../shared/Logo";
 
 import "./main-menu.scss";
-import MenuList from "./MenuList";
 
 const MainMenu = props => {
   const [menuVisible, setMenuVisible] = useState(false);

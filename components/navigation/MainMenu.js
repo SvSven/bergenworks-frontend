@@ -7,6 +7,7 @@ import MenuLink from "./MenuLink";
 import Logo from "../shared/Logo";
 
 import "./main-menu.scss";
+import MenuList from "./MenuList";
 
 const MainMenu = props => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -38,15 +39,10 @@ const MainMenu = props => {
         </div>
 
         {props.items ? (
-          <ul className={`navbar-menu ${menuVisible ? "is-active" : null}`}>
-            {props.items.map(item => {
-              return (
-                <li key={item.id}>
-                  <MenuLink {...item} />
-                </li>
-              );
-            })}
-          </ul>
+          <MenuList
+            items={props.items}
+            className={`navbar-menu ${menuVisible ? "is-active" : null}`}
+          />
         ) : null}
       </nav>
     </div>

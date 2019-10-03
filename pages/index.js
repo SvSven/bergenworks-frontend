@@ -4,8 +4,12 @@ import API from "../utils/api";
 const Home = props => {
   return (
     <div>
-      <h1>{props.title.rendered}</h1>
-      <div dangerouslySetInnerHTML={{ __html: props.content.rendered }}></div>
+      <h1>{props.title ? props.title.rendered : null}</h1>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: props.content ? props.content.rendered : null
+        }}
+      ></div>
     </div>
   );
 };

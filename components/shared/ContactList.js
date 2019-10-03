@@ -4,8 +4,11 @@ const ContactList = props => {
   const email = useSelector(state => state.contact_email);
   const phone = useSelector(state => state.contact_phone);
   const address = useSelector(state => state.contact_address);
+  let address_string = null;
 
-  const address_string = `${address.street}, ${address.postal}, ${address.city}`;
+  if (address) {
+    address_string = `${address.street}, ${address.postal}, ${address.city}`;
+  }
 
   return (
     <ul className={props.className || null}>

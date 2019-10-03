@@ -6,7 +6,7 @@ import MenuList from "../navigation/MenuList";
 import "./footer.scss";
 
 const Footer = props => {
-  const logo = useSelector(state => state.logo.footer);
+  const logo = useSelector(state => (state.logo ? state.logo.footer : null));
   const menus = useSelector(state => state.menus);
 
   const footer_menus = [
@@ -19,7 +19,7 @@ const Footer = props => {
     <footer className="footer">
       <div className="footer-inner container">
         <div className="footer-contact">
-          <Logo src={logo} className="footer-logo" />
+          {logo ? <Logo src={logo} className="footer-logo" /> : null}
           <ContactList />
         </div>
         <div className="footer-nav">

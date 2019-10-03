@@ -1,19 +1,21 @@
 import Link from "next/link";
 
 const MenuLink = props => {
-  let as_attr = null;
-  let href_attr = null;
+  let attributes = {};
 
   switch (props.type) {
-    case "post":
-      href_attr = "/post/[post]";
-      as_attr = `/post/${props.slug}`;
     case "page":
-      href_attr = "/[page]";
-      as_attr = `/${props.slug}`;
+      if (props.is_frontpage) {
+        attributes = { href: "/", as: null };
+      } else {
+        attributes = { href: "/[page]", as: `/${props.slug}` };
+      }
+      break;
+    case "post":
+      attributes = { href: "/post/[post]", as: `/post/${props.slug}` };
+      break;
     default:
-      as_attr = null;
-      href_attr = props.slug;
+      attributes = { href: props.slug, as: null };
   }
 
   return props.type == "custom" ? (
@@ -21,10 +23,7 @@ const MenuLink = props => {
       {props.title}
     </a>
   ) : (
-    <Link
-      href={props.is_frontpage ? "/" : href_attr}
-      as={props.is_frontpage ? null : as_attr}
-    >
+    <Link {...attributes}>
       <a>{props.title}</a>
     </Link>
   );

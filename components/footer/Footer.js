@@ -1,11 +1,19 @@
 import { useSelector } from "react-redux";
 import Logo from "../shared/Logo";
 import ContactList from "../shared/ContactList";
+import MenuList from "../navigation/MenuList";
 
 import "./footer.scss";
 
 const Footer = props => {
   const logo = useSelector(state => state.logo.footer);
+  const menus = useSelector(state => state.menus);
+
+  const footer_menus = [
+    menus["footer-left"],
+    menus["footer-center"],
+    menus["footer-right"]
+  ];
 
   return (
     <footer className="footer">
@@ -15,8 +23,17 @@ const Footer = props => {
           <ContactList className="footer-contact-list" />
         </div>
         <div className="footer-nav">
-          <h4>Footer navigation</h4>
-          <p>3 different menus</p>
+          {footer_menus.map(menu => {
+            return menu ? (
+              <div className="footer-nav-menu" key={menu["name"]}>
+                <MenuList
+                  className="footer-menu"
+                  name={menu["name"]}
+                  items={menu["items"]}
+                />
+              </div>
+            ) : null;
+          })}
         </div>
         <div className="footer-partners">
           <h4>Footer partners</h4>

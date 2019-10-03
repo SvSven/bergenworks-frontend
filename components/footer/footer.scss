@@ -39,6 +39,29 @@
         justify-content: space-between;
     }
 
+    &-nav {
+        padding: 0 3rem;
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+        text-align: center;
+    }
+
+    &-menu {
+        list-style: none;
+        padding: 0;
+    }
+
+    &-contact,
+    &-partners {
+        width: 250px;
+    }
+
+    &-partners {
+        text-align: center;
+    }
+
     &-copyright {
         margin-top: 3rem;
         padding: 1rem;

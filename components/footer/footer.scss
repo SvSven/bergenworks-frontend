@@ -15,26 +15,13 @@ $breakpoint_large: 960px;
         color: $color-white;
     }
 
-    &-logo {
-        max-width: 150px;
-        height: auto;
-    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-    &-contact {
-        text-align: center;
-
-        @media (min-width: $breakpoint_small) {
-            text-align: left;
-        }
-
-        &-list {
-            list-style: none;
-            padding: 0;
-            margin: 2.5rem 0 0 0;
-
-            li {
-                margin-bottom: 1em;
-            }
+        li {
+            margin-bottom: 1em;
         }
     }
 
@@ -42,23 +29,6 @@ $breakpoint_large: 960px;
     a:visited {
         text-decoration: none;
         color: $color-white-text;
-    }
-
-    &-menu {
-        list-style: none;
-        padding: 0;
-    }
-
-    &-partners {
-        text-align: center;
-    }
-
-    &-copyright {
-        margin-top: 3rem;
-        padding: 1rem;
-        font-size: 0.8em;
-        text-align: center;
-        background: $color-grey-darkest;
     }
 
     &-inner {
@@ -71,6 +41,20 @@ $breakpoint_large: 960px;
 
         @media (min-width: $breakpoint_large) {
             grid-template-columns: 250px 1fr 250px;
+        }
+    }
+
+    &-contact {
+        text-align: center;
+
+        @media (min-width: $breakpoint_small) {
+            text-align: left;
+        }
+
+        .footer-logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 2.5rem;
         }
     }
 
@@ -93,5 +77,17 @@ $breakpoint_large: 960px;
             grid-row: auto;
             grid-column: auto;
         }
+    }
+
+    &-partners {
+        text-align: center;
+    }
+
+    &-copyright {
+        margin-top: 3rem;
+        padding: 1rem;
+        font-size: 0.8em;
+        text-align: center;
+        background: $color-grey-darkest;
     }
 }

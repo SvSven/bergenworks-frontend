@@ -20,17 +20,13 @@ const Footer = props => {
       <div className="footer-inner container">
         <div className="footer-contact">
           <Logo src={logo} className="footer-logo" />
-          <ContactList className="footer-contact-list" />
+          <ContactList />
         </div>
         <div className="footer-nav">
           {footer_menus.map(menu => {
             return menu ? (
               <div className="footer-nav-menu" key={menu["name"]}>
-                <MenuList
-                  className="footer-menu"
-                  name={menu["name"]}
-                  items={menu["items"]}
-                />
+                <MenuList name={menu["name"]} items={menu["items"]} />
               </div>
             ) : null;
           })}

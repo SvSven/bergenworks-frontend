@@ -12,10 +12,9 @@ $breakpoint: $mobile;
         flex-direction: row;
     }
 
-    &-text {
-        font-size: 1rem;
+    .testimonial-text {
         font-style: italic;
-        line-height: 2rem;
+        line-height: 2.2em;
         margin: 0;
         position: relative;
 
@@ -48,10 +47,11 @@ $breakpoint: $mobile;
         }
     }
 
-    &-author {
+    .testimonial-author {
         min-width: 150px;
         text-align: center;
         margin: 2rem 0 0 0;
+        font-size: 1rem;
 
         @media screen and(min-width: $breakpoint) {
             margin: 0 0 0 2rem;
@@ -66,7 +66,7 @@ $breakpoint: $mobile;
 
         &-name {
             font-weight: $font-weight-bold;
-            margin: 0.5rem 0;
+            margin: 0.5rem 0 0 0;
         }
 
         &-role {

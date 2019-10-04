@@ -17,7 +17,7 @@ Page.getInitialProps = async function(context) {
   const { page } = context.query;
   const content = await API.getPage(page);
 
-  return content[0];
+  return content;
 };
 
 export default Page;

@@ -17,7 +17,7 @@ Post.getInitialProps = async function(context) {
   const { post } = context.query;
   const content = await API.getPost(post);
 
-  return content[0];
+  return content;
 };
 
 export default Post;

@@ -7,7 +7,9 @@ const ENDPOINTS = {
   menus: API_HOST + "/bw/v1/menus",
   frontpage: API_HOST + "/bw/v1/frontpage",
   pages: API_HOST + "/wp/v2/pages",
-  posts: API_HOST + "/wp/v2/posts"
+  posts: API_HOST + "/wp/v2/posts",
+  page: API_HOST + "/bw/v1/page/",
+  post: API_HOST + "/bw/v1/post/"
 };
 
 const API = {
@@ -22,13 +24,13 @@ const API = {
     return await API.get(ENDPOINTS.menus);
   },
   getFrontpage: async () => {
-    return await API.get(ENDPOINTS.frontpage);
+    return await API.get(ENDPOINTS.page + "home");
   },
   getPage: async page => {
-    return await API.get(`${ENDPOINTS.pages}?slug=${page}`);
+    return await API.get(ENDPOINTS.page + page);
   },
   getPost: async post => {
-    return await API.get(`${ENDPOINTS.posts}?slug=${post}`);
+    return await API.get(ENDPOINTS.post + post);
   }
 };
 

@@ -1,0 +1,71 @@
+@import "variables";
+
+// Default WordPress (v5.2.3) Gutenberg block styles
+// source: wordpress/wp-includes/css/dist/block-library/style.min.css
+@import "wp-blocks.min.css";
+
+// Custom styling to overwrite defaults:
+.wp-block-image {
+    margin: 2rem 0;
+
+    img {
+        max-width: 100%;
+    }
+
+    figcaption {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+.wp-block-quote {
+    margin: 2rem 0;
+
+    &.is-style-large {
+        > p {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    > p {
+        margin: 0;
+        font-style: italic;
+    }
+
+    cite {
+        display: block;
+        font-style: normal;
+        font-size: 1rem;
+        margin-top: 0;
+        color: scale-color($color-black-text, $lightness: 20%);
+
+        &:before {
+            content: "-";
+            padding: 0 0.5em 0 1em;
+        }
+    }
+}
+
+.has-small-font-size,
+.has-medium-font-size,
+.has-large-font-size,
+.has-huge-font-size {
+    line-height: 1.7em;
+}
+
+.has-small-font-size {
+    font-size: 0.5em;
+}
+
+.has-medium-font-size {
+    font-size: 1.5em;
+}
+
+.has-large-font-size {
+    font-size: 2.5em;
+}
+
+.has-huge-font-size {
+    font-size: 3.5em;
+}

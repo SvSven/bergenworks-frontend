@@ -4,7 +4,8 @@ const API_HOST = process.env.API_HOST;
 
 const ENDPOINTS = {
   site_info: API_HOST + "/bw/v1/site-info",
-  menus: API_HOST + "/bw/v1/menus",
+  menus: API_HOST + "/bw/v1/menus", // get all menus
+  menu: API_HOST + "/bw/v1/menus/", // specific menu: /menus/<menu_name>
   pages: API_HOST + "/bw/v1/pages", // all pages
   posts: API_HOST + "/bw/v1/posts", // all posts
   page: API_HOST + "/bw/v1/pages/", // individual page: /pages/<slug>
@@ -21,6 +22,9 @@ const API = {
   },
   getMenus: async () => {
     return await API.get(ENDPOINTS.menus);
+  },
+  getMenu: async menu => {
+    return await API.get(ENDPOINTS.menu + menu);
   },
   getFrontpage: async () => {
     return await API.get(ENDPOINTS.page + "home");

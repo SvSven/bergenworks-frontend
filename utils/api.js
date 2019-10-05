@@ -5,11 +5,10 @@ const API_HOST = process.env.API_HOST;
 const ENDPOINTS = {
   site_info: API_HOST + "/bw/v1/site-info",
   menus: API_HOST + "/bw/v1/menus",
-  frontpage: API_HOST + "/bw/v1/frontpage",
-  pages: API_HOST + "/wp/v2/pages",
-  posts: API_HOST + "/wp/v2/posts",
-  page: API_HOST + "/bw/v1/page/",
-  post: API_HOST + "/bw/v1/post/"
+  pages: API_HOST + "/bw/v1/pages", // all pages
+  posts: API_HOST + "/bw/v1/posts", // all posts
+  page: API_HOST + "/bw/v1/pages/", // individual page: /pages/<slug>
+  post: API_HOST + "/bw/v1/posts/" // individual post: /posts/<slug>
 };
 
 const API = {

@@ -1,4 +1,21 @@
+@import "variables";
+
+.page-hero {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
 .page-content {
+    background: $color-white;
+    padding: 3rem;
+    flex-grow: 1;
+
+    &.has-hero {
+        margin-top: -2rem;
+    }
+
     p, ul, ol, h1, h2, h3, h4, h5, h6 {
         margin: 2rem 0;
     }
@@ -6,5 +23,9 @@
     li > ul,
     li > ol {
         margin: 0;
+    }
+
+    .page-title {
+        margin-top: 0;
     }
 }

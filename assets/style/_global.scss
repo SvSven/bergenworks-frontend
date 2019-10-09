@@ -5,6 +5,10 @@ html {
     color: $color-black-text;
 }
 
+body {
+    background: $color-grey-light;
+}
+
 *, *:before, *:after {
     box-sizing: inherit;
 }

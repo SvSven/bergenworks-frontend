@@ -39,3 +39,15 @@
         margin-top: 2rem;
     }
 }
+
+.hero-blocks {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-60%);
+
+    p {
+        background: $color-black;
+        padding: 1em;
+        margin: 1em;
+    }
+}

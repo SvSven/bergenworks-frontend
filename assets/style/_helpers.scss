@@ -3,3 +3,8 @@
     max-width: 1200px;
     margin: auto;
 }
+
+.has-img-frame {
+    outline: solid 3px $color-white;
+    outline-offset: -30px;
+}

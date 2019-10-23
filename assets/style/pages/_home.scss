@@ -1,0 +1,41 @@
+.home-hero {
+    background-size: cover;
+    background-position: center center;
+    height: 605px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .hero-inner {
+        width: 90%;
+        max-width: 1200px;
+        border: solid 3px $color-white;
+        padding: 30px;
+        margin: 30px auto;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-title,
+    .hero-subtitle {
+        color: $color-white;
+        text-align: center;
+        max-width: 800px;
+        margin: 0;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+        font-weight: $font-weight-bold;
+        line-height: 1.8em;
+        margin-top: 2rem;
+    }
+}

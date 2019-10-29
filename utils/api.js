@@ -12,7 +12,7 @@ const ENDPOINTS = {
   post: API_HOST + "/bw/v1/posts/" // individual post: /posts/<slug>
 };
 
-const API = {
+export const API = {
   get: async endpoint => {
     const response = await Axios.get(endpoint);
     return response.data;
@@ -36,5 +36,7 @@ const API = {
     return await API.get(ENDPOINTS.post + post);
   }
 };
+
+export const CONTENT_FIELD = "acf_content";
 
 export default API;

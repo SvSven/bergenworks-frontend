@@ -1,5 +1,5 @@
 import React from "react";
-import API from "../utils/api";
+import { API, CONTENT_FIELD } from "../utils/api";
 import Hero from "../components/hero-section/Hero";
 
 const Home = props => {

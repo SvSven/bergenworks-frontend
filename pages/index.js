@@ -3,26 +3,18 @@ import { API, CONTENT_FIELD } from "../utils/api";
 import Hero from "../components/hero-section/Hero";
 
 const Home = props => {
-  const content = props.acf;
-  const hero = content.hero_section;
+  const page = props[CONTENT_FIELD];
 
-  return (
+  return page ? (
     <>
       <Hero
         className="home-hero"
-        title={hero.content.title}
-        subtitle={hero.content.subtitle}
-        image={hero.content.image.sizes.page_hero}
+        title={page.hero.content.title}
+        subtitle={page.hero.content.subtitle}
+        image={page.hero.image.sizes.page_hero}
       />
-
-      <h1>{props.title ? props.title.rendered : null}</h1>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: props.content ? props.content.rendered : null
-        }}
-      ></div>
     </>
-  );
+  ) : null;
 };
 
 Home.getInitialProps = async function() {

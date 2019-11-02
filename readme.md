@@ -1,5 +1,2 @@
 # Bergen.Works frontend
-Frontend for the Bergen.Works website, built with React and Next.js - this is meant to be the frontend for a headless CMS. The backend for the Bergen.Works website can be found [here](https://github.com/SvSven/bergenworks-backend-wp)
-
-### TODO (long term)
-* See if what we store in redux can be migrated over to use the context API
+Frontend for the Bergen.Works website, built with React and Next.js - this is meant to be the frontend that is used with a headless CMS. The current backend that will be used with this website is built with WordPress and can be found [at this repository](https://github.com/SvSven/bergenworks-backend-wp).

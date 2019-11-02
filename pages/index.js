@@ -11,7 +11,7 @@ const Home = props => {
         className="home-hero"
         title={page.hero.content.title}
         subtitle={page.hero.content.subtitle}
-        image={page.hero.image.sizes.page_hero}
+        image={page.hero.content.image.sizes.page_hero}
       />
     </>
   ) : null;

@@ -1,0 +1,21 @@
+@import "../../assets/style/variables";
+
+.icon-link-block {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: $color-black;
+    padding: 1.5rem 3rem;
+    color: $color-white;
+    text-decoration: none;
+
+    img {
+        max-width: 35px;
+        height: auto;
+    }
+
+    span {
+        margin-top: 0.5em;
+        color: $color-cyan;
+    }
+}

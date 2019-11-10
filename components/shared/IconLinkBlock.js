@@ -1,5 +1,7 @@
 import NavLink from "../navigation/NavLink";
 
+import "./icon-link-block.scss";
+
 const IconLinkBlock = props => {
   return (
     <NavLink {...props.link} className="icon-link-block">

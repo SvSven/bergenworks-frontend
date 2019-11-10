@@ -8,7 +8,7 @@ const MenuList = props => {
         {props.items.map(item => {
           return (
             <li key={item.id}>
-              <MenuLink {...item} />
+              <MenuLink {...item}>{item.title}</MenuLink>
             </li>
           );
         })}

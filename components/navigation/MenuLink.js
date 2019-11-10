@@ -24,7 +24,7 @@ const MenuLink = props => {
     </a>
   ) : (
     <Link {...attributes}>
-      <a>{props.title}</a>
+      <a>{props.children}</a>
     </Link>
   );
 };

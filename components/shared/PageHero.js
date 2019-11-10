@@ -1,13 +1,17 @@
 const PageHero = props => {
   return (
     <section
-      className={props.className}
-      style={{ backgroundImage: `url(${props.image.sizes.page_hero})` }}
+      className={props.className || "page-hero"}
+      style={{ backgroundImage: `url(${props.image})` }}
     >
-      <div className="hero-inner">
-        {props.title ? <h1 className="hero-title">{props.title}</h1> : null}
-        {props.title ? <p className="hero-subtitle">{props.subtitle}</p> : null}
-      </div>
+      {props.title ? (
+        <div className="hero-inner">
+          <h1 className="hero-title">{props.title}</h1>
+          {props.subtitle ? (
+            <p className="hero-subtitle">{props.subtitle}</p>
+          ) : null}
+        </div>
+      ) : null}
     </section>
   );
 };

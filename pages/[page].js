@@ -1,14 +1,10 @@
 import API from "../utils/api";
+import PageHero from "../components/shared/PageHero";
 
 const Page = props => {
   return (
     <>
-      {props.featured_image ? (
-        <div
-          className="page-hero"
-          style={{ backgroundImage: `url(${props.featured_image})` }}
-        ></div>
-      ) : null}
+      {props.featured_image ? <PageHero image={props.featured_image} /> : null}
 
       <div
         className={`page-content container ${

@@ -1,7 +1,7 @@
 .home-hero {
     background-size: cover;
     background-position: center center;
-    height: 605px;
+    min-height: 605px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,6 +30,7 @@
 
     .hero-title {
         font-size: 3rem;
+        line-height: 1.3em;
     }
 
     .hero-subtitle {
@@ -43,7 +44,12 @@
 .hero-blocks {
     display: flex;
     justify-content: center;
-    transform: translateY(-60%);
+    margin-top: 1rem;
+
+    @media screen and(min-width: $mobile) {
+        margin: 0;
+        transform: translateY(-60%);
+    }
 
     &-inner {
         display: flex;
@@ -53,14 +59,17 @@
         max-width: 750px;
         margin: auto;
 
-        @media screen and(min-width: $mobile){
+        @media screen and(min-width: $mobile) {
             flex-direction: row;
         }
 
         .icon-link-block  {
             flex: 1 1 0px;
             margin: 5px;
-            max-width: 250px;
+
+            @media screen and(min-width: $mobile) {
+                max-width: 250px;
+            }
         }
     }
 }

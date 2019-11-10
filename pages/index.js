@@ -1,6 +1,6 @@
 import React from "react";
 import { API, CONTENT_FIELD } from "../utils/api";
-import Hero from "../components/hero-section/Hero";
+import PageHero from "../components/shared/PageHero";
 import IconLinkBlock from "../components/shared/IconLinkBlock";
 
 const Home = props => {
@@ -8,7 +8,7 @@ const Home = props => {
 
   return page ? (
     <>
-      <Hero className="home-hero" {...page.hero.content} />
+      <PageHero className="home-hero" {...page.hero.content} />
 
       <div className="hero-blocks">
         <div className="hero-blocks-inner">

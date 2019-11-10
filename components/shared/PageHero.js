@@ -1,4 +1,4 @@
-const Hero = props => {
+const PageHero = props => {
   return (
     <section
       className={props.className}
@@ -12,4 +12,4 @@ const Hero = props => {
   );
 };
 
-export default Hero;
+export default PageHero;

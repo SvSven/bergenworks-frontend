@@ -1,4 +1,4 @@
-import MenuLink from "./MenuLink";
+import NavLink from "./NavLink";
 
 const MenuList = props => {
   return (
@@ -8,7 +8,7 @@ const MenuList = props => {
         {props.items.map(item => {
           return (
             <li key={item.id}>
-              <MenuLink {...item}>{item.title}</MenuLink>
+              <NavLink {...item}>{item.title}</NavLink>
             </li>
           );
         })}

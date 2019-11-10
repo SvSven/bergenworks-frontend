@@ -1,11 +1,11 @@
-import MenuLink from "../navigation/MenuLink";
+import NavLink from "../navigation/NavLink";
 
 const IconLinkBlock = props => {
   return (
-    <MenuLink hoc={true} {...props.link} className="icon-link-block">
+    <NavLink hoc={true} {...props.link} className="icon-link-block">
       <img src={props.icon} />
       <span>{props.title}</span>
-    </MenuLink>
+    </NavLink>
   );
 };
 

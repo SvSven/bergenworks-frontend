@@ -1,6 +1,7 @@
 import React from "react";
 import { API, CONTENT_FIELD } from "../utils/api";
 import Hero from "../components/hero-section/Hero";
+import IconLinkBlock from "../components/shared/IconLinkBlock";
 
 const Home = props => {
   const page = props[CONTENT_FIELD];
@@ -13,6 +14,12 @@ const Home = props => {
         subtitle={page.hero.content.subtitle}
         image={page.hero.content.image.sizes.page_hero}
       />
+
+      <div className="hero-blocks">
+        {page.hero.blocks.map((block, index) => {
+          return <IconLinkBlock key={index} {...block} />;
+        })}
+      </div>
     </>
   ) : null;
 };

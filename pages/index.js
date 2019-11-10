@@ -16,9 +16,11 @@ const Home = props => {
       />
 
       <div className="hero-blocks">
-        {page.hero.blocks.map((block, index) => {
-          return <IconLinkBlock key={index} {...block} />;
-        })}
+        <div className="hero-blocks-inner">
+          {page.hero.blocks.map((block, index) => {
+            return <IconLinkBlock key={index} {...block} />;
+          })}
+        </div>
       </div>
     </>
   ) : null;

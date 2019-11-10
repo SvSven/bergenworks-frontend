@@ -4,10 +4,12 @@
     display: inline-flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background: $color-black;
     padding: 1.5rem 3rem;
     color: $color-white;
     text-decoration: none;
+    text-align: center;
 
     img {
         max-width: 35px;

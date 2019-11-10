@@ -47,13 +47,20 @@
 
     &-inner {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 90%;
-        max-width: 500px;
+        max-width: 750px;
         margin: auto;
 
-        a {
+        @media screen and(min-width: $mobile){
+            flex-direction: row;
+        }
+
+        .icon-link-block  {
             flex: 1 1 0px;
             margin: 5px;
+            max-width: 250px;
         }
     }
 }

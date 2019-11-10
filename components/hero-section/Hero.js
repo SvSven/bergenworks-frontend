@@ -2,7 +2,7 @@ const Hero = props => {
   return (
     <section
       className={props.className}
-      style={{ backgroundImage: `url(${props.image})` }}
+      style={{ backgroundImage: `url(${props.image.sizes.page_hero})` }}
     >
       <div className="hero-inner">
         {props.title ? <h1 className="hero-title">{props.title}</h1> : null}

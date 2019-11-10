@@ -8,12 +8,7 @@ const Home = props => {
 
   return page ? (
     <>
-      <Hero
-        className="home-hero"
-        title={page.hero.content.title}
-        subtitle={page.hero.content.subtitle}
-        image={page.hero.content.image.sizes.page_hero}
-      />
+      <Hero className="home-hero" {...page.hero.content} />
 
       <div className="hero-blocks">
         <div className="hero-blocks-inner">

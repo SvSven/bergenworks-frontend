@@ -8,11 +8,11 @@ const Home = props => {
 
   return page ? (
     <>
-      <PageHero className="home-hero" {...page.hero.content} />
+      <PageHero className="home-hero" {...page.hero_section} />
 
       <div className="hero-blocks">
         <div className="hero-blocks-inner">
-          {page.hero.blocks.map((block, index) => {
+          {page.hero_section.blocks.map((block, index) => {
             return <IconLinkBlock key={index} {...block} />;
           })}
         </div>

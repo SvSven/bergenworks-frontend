@@ -1,15 +1,15 @@
 const PageHero = props => {
+  const { className, image, title, subtitle } = props;
+
   return (
     <section
-      className={props.className || "page-hero"}
-      style={{ backgroundImage: `url(${props.image})` }}
+      className={className || "page-hero"}
+      style={{ backgroundImage: `url(${image.url})` }}
     >
-      {props.title ? (
+      {title ? (
         <div className="hero-inner">
-          <h1 className="hero-title">{props.title}</h1>
-          {props.subtitle ? (
-            <p className="hero-subtitle">{props.subtitle}</p>
-          ) : null}
+          <h1 className="hero-title">{title}</h1>
+          {subtitle ? <p className="hero-subtitle">{subtitle}</p> : null}
         </div>
       ) : null}
     </section>
